@@ -1,0 +1,20 @@
+{
+    "name": "@webly/editor",
+    "author": "Kevin Sundar Raj (@kevtechi)",
+    "version": "0.1.0",
+    "exports": "./dist",
+    "license": "GPL-3.0",
+    "vendor": true,
+    "tasks": {
+        "dev": "deno run -A npm:vite",
+        "build": "deno check **/*.ts && deno run -A npm:vite build"
+    },
+    "publish": {
+        "include": [
+            "dist",
+            "deno.json",
+            "LICENSE",
+            "README.md"
+        ]
+    }
+}
