@@ -14,7 +14,8 @@
             "dist",
             "deno.json",
             "LICENSE",
-            "README.md"
+            "README.md",
+            "mod.ts"
         ]
     }
 }
