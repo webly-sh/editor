@@ -26,5 +26,18 @@ jobs:
       - name: Build package
         run: deno task build
 
+      - name: Compress dist folder
+        run: tar -czf dist.tar.gz dist
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "bot@webly.sh"
+          git config --local user.name "webly-bot"
+          git add -f dist.tar.gz
+          git commit -m "Publish compressed dist" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push origin main
+
       - name: Publish package
         run: deno publish

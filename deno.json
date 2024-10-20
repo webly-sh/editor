@@ -2,7 +2,10 @@
     "name": "@webly/editor",
     "author": "Kevin Sundar Raj (@kevtechi)",
     "version": "0.1.2",
-    "exports": "./mod.ts",
+    "exports": {
+        ".": "./webly.plugin.json",
+        "./dist": "./dist.tar.gz"
+    },
     "license": "GPL-3.0",
     "vendor": true,
     "tasks": {
@@ -11,11 +14,11 @@
     },
     "publish": {
         "include": [
-            "dist",
             "deno.json",
             "LICENSE",
             "README.md",
-            "mod.ts"
+            "webly.plugin.json",
+            "dist.tar.gz"
         ]
     }
 }

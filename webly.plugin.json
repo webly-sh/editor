@@ -1,0 +1,6 @@
+{
+  "name": "Editor",
+  "description": "Simple page editor for webly",
+  "type": "spa",
+  "dist": "dist.tar.gz"
+}
